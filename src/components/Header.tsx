@@ -1,9 +1,11 @@
-export default function Header(){
+import { Link } from "react-router-dom";
+
+export default function Header() {
     return (
         <header>
             <h1>Adaopte</h1>
             <nav>
-                <a href="/">Accueil</a>
+                <Link to="/">Accueil</Link>
                 </nav>
         </header>
     );

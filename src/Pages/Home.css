@@ -1,0 +1,54 @@
+.hero {
+    padding: 3rem;
+    background: #fdf6e3;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 1rem auto 0;
+}
+
+.animal-preview {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.car{
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top:2rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: #333;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+   transition: transform 0.2s ease, background 0.2s ease;
+}
+     
+.cta-button:hover {
+    background:#7a78ff;
+    transform: scale(1.05);
+}    
+
