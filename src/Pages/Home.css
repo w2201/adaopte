@@ -1,38 +1,46 @@
 .hero {
-    padding: 3rem;
-    background: #fdf6e3;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f9f9ff, #ffffff);
     border-radius: 12px;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+   
 }
 
 .hero p {
     max-width: 700px;
     margin: 1rem auto 0;
+    font-size: 1.1rem;
+   line-height: 1.6;
 }
 
 .animal-preview {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .car{
-    padding: 1rem;
-    border: 2px solid #ddd;
+    padding: 1.2rem;
     border-radius: 10px;
     background: #f9f9f9;
-    width: 120px;
+    border: 2px solid #ddd;
+    width: 140px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .cta-button {
@@ -43,6 +51,7 @@
     background: #333;
     cursor: pointer;
     color: #fff;
+    font-weight: bold;
     text-decoration: none;
    transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -52,3 +61,9 @@
     transform: scale(1.05);
 }    
 
+@media (max-width: 700px) {
+    .animal-preview {
+       justify-content: center;
+     }   
+   
+}
