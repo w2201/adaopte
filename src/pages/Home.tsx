@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { useAnimalTypes } from "../lib/useAnimalTypes";
+
 
 
 
 export default function Home() {
+    const { data: animalTypes, isLoading, isError } = useAnimalTypes();
     return (
         <main>
             <section className="hero" aria-label="Présentation de la plateforme d'adoption">
@@ -22,7 +25,24 @@ export default function Home() {
                 <p>Découvrez les animaux disponibles pour l'adoption.
                      Chaque photo raconte une histoire et un espoir.
                      </p>
+                     <div className="animal-preview">
+   {isLoading && <p>Chargement...</p>}
+  {isError && <p>Erreur de chargement</p>}
+
+  {animalTypes?.map(type => (
+    <Link
+      key={type.id}
+      to={`/jadopte?type=${type.name.toLowerCase()}`}
+      className="card"
+    >
+      <strong>{type.name}</strong>
+    </Link>
+  ))}
+</div>
               <div className="animal-preview">
+                {isLoading && <p>Chargement des types d'animaux...</p> }
+                {isError && <p>Erreur lors du chargement des types d'animaux.</p> }
+                {}
                      <Link to="/jadopte?type=chien" className="card" aria-label="voir les chiens à adopter">
                              🐶 <strong>Chien</strong>
                     </Link>
